@@ -46,8 +46,6 @@ brew tap cjbassi/gotop
 ###############################################################################
 
 #Installing Developing tools
-printf "Installing Docker.app...\n"
-brew cask install --appdir="/Applications" docker
 printf "Installing Github.app...\n"
 brew cask install --appdir="/Applications" github
 printf "Installing iTerm2.app...\n"
@@ -57,73 +55,17 @@ brew cask install --appdir="/Applications" iterm2
 printf "Installing Visual Studio Code.app...\n"
 brew cask install --appdir="/Applications" visual-studio-code
 
-#Installing Games apps
-printf "Installing Battle Net.app...\n"
-brew cask install --appdir="/Applications" battle-net
-printf "Installing Discord.app...\n"
-brew cask install --appdir="/Applications" discord
-printf "Installing Steam.app...\n"
-brew cask install --appdir="/Applications" steam
-printf "Installing Steermouse.app...\n"
-brew cask install --appdir="/Applications" steermouse
-
 #Installing Multimedia and Graphics apps
 printf "Installing Easyres.app...\n"
 mas install 688211836
-printf "Installing Handbrake.app...\n"
-brew cask install --appdir="/Applications" handbrake
-printf "Installing Helium.app...\n"
-mas install 1054607607
-printf "Installing Iina.app...\n"
-brew cask install --appdir="/Applications" iina
-printf "Installing Imageoptim.app...\n"
-brew cask install --appdir="/Applications" imageoptim
-printf "Installing Pixelmator.app...\n"
-mas install 407963104
-printf "Installing Sip.app...\n"
-brew cask install --appdir="/Applications" sip
 
 #Installing Internet and Networking apps
 printf "Installing Google Chrome.app...\n"
 brew cask install --appdir="/Applications" google-chrome
-printf "Installing Transmission.app...\n"
-brew cask install --appdir="/Applications" transmission
-printf "Installing WebTorrent.app...\n"
-brew cask install --appdir="/Applications" webtorrent-cli
-printf "Installing Wipr.app...\n"
-mas install 1320666476
-
-#Installing Productivity apps
-printf "Installing Magnet.app...\n"
-mas install 441258766
-printf "Installing Pages.app...\n"
-mas install 409201541
-printf "Installing Popclip.app...\n"
-mas install 445189367
-printf "Installing Spark.app...\n"
-mas install 1176895641
-
-#Installing Security apps
-printf "Installing Expressvpn.app...\n"
-brew cask install --appdir="/Applications" expressvpn
-
-#Installing Social apps
-printf "Installing Franz.app...\n"
-brew cask install --appdir="/Applications" franz
 
 #Installing Utility apps
 printf "Installing Alfred.app...\n"
 brew cask install --appdir="/Applications" alfred
-printf "Installing Amphetamine.app...\n"
-mas install 937984704
-printf "Installing App Cleaner.app...\n"
-brew cask install --appdir="/Applications" appcleaner
-printf "Installing Cheatsheet.app...\n"
-brew cask install --appdir="/Applications" cheatsheet
-printf "Installing DaisyDisk.app...\n"
-mas install 411643860
-printf "Installing Google Drive.app...\n"
-brew cask install --appdir="/Applications" google-drive-file-stream
 printf "Installing The Unarchiever.app...\n"
 brew cask install --appdir="/Applications" the-unarchiver
 
@@ -188,41 +130,13 @@ curl https://raw.githubusercontent.com/MarioCatuogno/Clean-macOS/master/config/.
 curl https://raw.githubusercontent.com/MarioCatuogno/Clean-macOS/master/config/.gitconfig -o ~/.gitconfig
 
 ###############################################################################
-# Installing Python                                                           #
-###############################################################################
-
-#Installing Python
-printf "Installing Python3...\n"
-brew install python3
-printf "Installing Python packages...\n"
-pip3 install autopep8
-pip3 install numpy
-pip3 install organize-tool
-pip3 install pandas
-pip3 install pylint
-pip3 install requests
-pip3 install speedtest-cli
-pip3 install virtualenv
-
-###############################################################################
 # Setup Visual Studio Code                                                    #
 ###############################################################################
 
 #Install packages
 printf "Installing Visual Studio Code packages...\n"
-code --install-extension HookyQR.beautify
-code --install-extension DavidAnson.vscode-markdownlint
-code --install-extension GrapeCity.gc-excelviewer
 code --install-extension teabyii.ayu
-code --install-extension 77qingliu.sas-syntax
-code --install-extension ms-python.python
-code --install-extension Tyriar.sort-lines
-code --install-extension pnp.polacode
 code --install-extension formulahendry.code-runner
-code --install-extension mikestead.dotenv
-code --install-extension formulahendry.code-runner
-code --install-extension yzhang.markdown-all-in-one
-code --install-extension JaimeOlivares.yuml
 
 #Download settings
 printf "Visual Studio Code: update preferences\n"
@@ -336,31 +250,12 @@ printf "Keyboard: disable cotninuous spell checking\n"
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
 ###############################################################################
-# Configure macOS: Mail                                                       #
-###############################################################################
-
-printf "Configuring Mail.app...\n"
-printf "Mail: show attachments as icons\n"
-defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
-printf "Mail: disable autocorrect\n"
-defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
-
-###############################################################################
 # Configure macOS: Safari                                                     #
 ###############################################################################
 
 printf "Configuring Safari.app...\n"
-printf "Safari: disable Apple send queries\n"
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-printf "Safari: don't open safe files\n"
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
-printf "Safari: show favorites bar\n"
-defaults write com.apple.Safari ShowFavoritesBar -bool true
 printf "Safari: enable develop menu\n"
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
-printf "Safari: disable auto-correct\n"
-defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
 
 ###############################################################################
 # Configure macOS: TextEdit                                                   #
@@ -382,8 +277,6 @@ printf "Trackpad: enable tap to click\n"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-printf "Trackpad: disable Natural scrolling\n"
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 ###############################################################################
 # Configure macOS: Various                                                    #
