@@ -39,11 +39,4 @@ alias path='echo -e ${PATH//:/\\n}'
 alias reload="exec ${SHELL} -l"
 
 # Shortcuts
-alias gh="cd ~/Google Drive/Develop/Github"
-alias docs="cd ~/Google Drive/Personal"
-alias ping="prettyping --nolegend"
-alias speedtest="speedtest-cli"
-
-# Useful alias
-alias python=python3
-alias pip=pip3
+alias gro="git rebase origin/master"
