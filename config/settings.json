@@ -16,38 +16,8 @@
   "editor.trimAutoWhitespace": true,
   // Insert a new line at the end of the page
   "files.insertFinalNewline": true,
-  // Controls CSV parameters
-  "csv-preview.separator": ";",
-  "csv-preview.resizeColumns": "all",
-  "[csv]": {},
   // Set default zoom level
   "window.zoomLevel": 0,
-  // Set minimap side
-  "editor.minimap.side": "right",
-  // Set rulers and word wrap
-  "editor.rulers": [120],
-  "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 120,
-  "[markdown]": {
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.quickSuggestions": false
-  },
-  // Hide release notes
-  "update.showReleaseNotes": false,
-  // Check for updates
-  "extensions.autoCheckUpdates": true,
-  // Do not send data
-  "telemetry.enableTelemetry": false,
-  // Hide confirm box when delete
-  "explorer.confirmDelete": false,
-  // Removes files from editor window
-  "files.exclude": {
-    ".dropbox": true,
-    ".dropbox.cache": true,
-    ".DS_Store": true,
-    "**/.git": true,
-    "**/.svn": true
-  },
   // Theme
   "editor.fontFamily": "'Fira Code'",
   "editor.fontLigatures": true,
@@ -59,13 +29,5 @@
     "statusBar.foreground": "#fff",
     "statusBar.noFolderBackground": "#313641",
     "statusBar.noFolderForeground": "#fff"
-  },
-  // Configure Python
-  "python.pythonPath": "/usr/local/opt/python/bin/python3.7",
-  // Extension: markdown-all-in-one
-  "markdown.extension.preview.autoShowPreviewToSide": false,
-  "markdown.extension.italic.indicator": "_",
-  "markdown.extension.syntax.decorations": false,
-  "markdown.extension.orderedList.autoRenumber": false,
-  "markdown.extension.tableFormatter.enabled": false
+  }
 }
